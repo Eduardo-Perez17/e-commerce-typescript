@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.button {
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 8px 10px;
+  box-shadow: 3px 3px 10px #ccc;
+  transition: all 0.3s ease;
+}
+
+.button-blue {
+  color: #fff;
+  background-color: #3b37fe;
+
+  &:hover {
+    background-color: #2620e4;
+    box-shadow: 2px 2px 7px #ccc;
+  }
+}
+
+.button-withe {
+  color: #000;
+  background-color: #fff;
+
+  &:hover {
+    background-color: #dcdbdb;
+    box-shadow: 2px 2px 7px #ccc;
+  }
+}
+
+.drop-area::before {
+  background-color: #3b37fe;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px #b8b8b8;
+  content: 'Seleccionar o soltar imagen';
+  transition: 0.2s ease;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.drop-area input[type='file'] {
+  opacity: 0;
+  width: 200px;
+  height: 32px;
+  display: inline-block;
+  position: absolute;
+}
+
+.container-app-father {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+}
+
+.container-app,
+.grid-son {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+@media screen and (min-width: 768px) {
+  .container-app-father {
+    display: grid;
+    grid-template-columns: 0px 1fr 0px;
+  }
+  .container-app {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .grid-father {
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .grid-father {
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid-father {
+    display: grid;
+    grid-template-columns: 160px 1fr 160px;
+  }
+}
